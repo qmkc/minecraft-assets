@@ -56,9 +56,10 @@ const getAssetsFromVersion = async (
     new AdmZip('tmp/client.jar').getEntries().forEach((entry) => {
       if (!/^(assets|data)\//.test(entry.entryName)) return;
 
+      if (entry.isDirectory) return;
       const disPath = path.join(output, entry.entryName);
       mkdirSync(path.dirname(disPath), { recursive: true });
-      writeFileSync(disPath, entry.getData());
+      writeFileSync(disPath, new Uint8Array(entry.getData()));
     });
     console.timeEnd('Extracting client.jar');
   }
