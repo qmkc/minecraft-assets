@@ -1,7 +1,7 @@
 name: Tick
 on:
   schedule:
-    - cron: '0 0/12 * * *'
+    - cron: '0 0 1/2 * *'
   workflow_dispatch:
 
 jobs:
