@@ -1,0 +1,13 @@
+{
+  "directories": [
+    "background"
+  ],
+  "files": [
+    "edition.png",
+    "herdcraft.png",
+    "minceraft.png",
+    "minecraft.png",
+    "mojangstudios.png",
+    "realms.png"
+  ]
+}
